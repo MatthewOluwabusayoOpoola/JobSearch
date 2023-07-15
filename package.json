@@ -2,7 +2,7 @@
   "name": "jobsearch",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://matthewoluwabusayoopoola.github.io/jobsearch",
+  "homepage": "https://github.com/gitname/jobsearch",
   "type": "module",
   "scripts": {
     "dev": "vite",
