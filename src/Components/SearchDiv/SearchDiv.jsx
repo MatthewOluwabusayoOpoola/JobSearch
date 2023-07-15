@@ -3,12 +3,12 @@ import { AiOutlineCloseCircle, AiOutlineSearch } from "react-icons/ai";
 import { BsHouseDoor } from "react-icons/bs";
 import { CiLocationOn } from "react-icons/ci";
 
-function SearchDiv() {
+function SearchDiv({ style }) {
   return (
     <div className="SearchDiv grid gap-10 bg-greyIsh rounded-[10px] p-[3rem]">
       <form action="">
-        <div className="firstDiv grid lg:flex justify-content item-center rounded-[8px] gap-[10px] bg-white p-5 shadow-lg shadow-greyIsh-700">
-          <div className="flex gap-2 items-center">
+        <div className="firstDiv grid lg:flex justify-center item-center rounded-[8px] gap-[30px] bg-white p-5 shadow-lg shadow-greyIsh-700">
+          <div className={`${style || ``} flex gap-2 items-center`}>
             <AiOutlineSearch className="text-[25px] icon " />
             <input
               type="text"
@@ -17,21 +17,25 @@ function SearchDiv() {
             />
             <AiOutlineCloseCircle className="text-[30px] text-[#a5a6a6] hover:text-textColor icon" />
           </div>
-          <div className="flex gap-2 items-center">
+          <div
+            className={` flex gap-2 items-center ${
+              style === "hidden" && "lg:w-[80%] "
+            } `}
+          >
             <BsHouseDoor className="text-[25px] icon " />
             <input
               type="text"
-              className="bg-transparent text-blue-500 focus:outline-none w-[100%]"
-              placeholder="Search by company..."
+              className=" bg-transparent text-blue-500 focus:outline-none w-[100%]"
+              placeholder="Search company..."
             />
             <AiOutlineCloseCircle className="text-[30px] text-[#a5a6a6] hover:text-textColor icon" />
           </div>
-          <div className="flex gap-2 items-center">
+          <div className={`${style || ``} flex gap-2 items-center`}>
             <CiLocationOn className="text-[25px] icon " />
             <input
               type="text"
               className="bg-transparent text-blue-500 focus:outline-none w-[100%]"
-              placeholder="Search by location..."
+              placeholder="search by location"
             />
             <AiOutlineCloseCircle className="text-[30px] text-[#a5a6a6] hover:text-textColor icon" />
           </div>
@@ -55,7 +59,7 @@ function SearchDiv() {
             <option value="">Relevance</option>
           </select>
         </div>
-        <div className="singleSearch flex items-center gap-2">
+        <div className={`${style || ``} singleSearch flex items-center gap-2`}>
           <label htmlFor="Type" className="text-[#808080] font-semibold">
             Type:
           </label>
@@ -70,7 +74,7 @@ function SearchDiv() {
             <option value="">Contract</option>
           </select>
         </div>
-        <div className="singleSearch flex items-center gap-2">
+        <div className={`${style || ``} singleSearch flex items-center gap-2`}>
           <label htmlFor="Level" className="text-[#808080] font-semibold">
             Level:
           </label>

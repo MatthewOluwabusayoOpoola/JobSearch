@@ -11,12 +11,14 @@ body {
   background: white;
 }
 
+.menuList,
 li {
   list-style: none;
   cursor: pointer;
   position: relative;
 }
 
+.menuList:hover::before,
 li:hover::before {
   position: absolute;
   content: "";
@@ -34,4 +36,9 @@ li:hover::before {
 
 .card {
   background: #000;
+}
+
+::selection {
+  background-color: rgb(142, 142, 165);
+  color: white;
 }
